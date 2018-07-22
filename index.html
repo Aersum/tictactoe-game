@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+<div id="container">
+<header> <h1>SVG Tic-Tac-Toe</h1> </header>
+<div id="menu">
+    <button onclick="modalOk();">Start</button>
+</div>
+<div id="tictac">
+ <svg id="winner">
+     <path id="winnerLine"/>
+ </svg>        
+ <div id="field">
+    <svg></svg>
+    <svg></svg>
+    <svg></svg>
+    <svg></svg>
+    <svg></svg>
+    <svg></svg>
+    <svg></svg>
+    <svg></svg>
+    <svg></svg>
+ </div>
+ 
+</div>
+<div id="eg"></div>
+<footer>Copyright &copy;</footer>
+</div>
+<div id="openModal" class="modalDialog">
+    <div>
+        <p id="modalMess"></p> 
+        <p>Restart game?</p>
+        <button id="ok" onclick="modalOk()">OK</button>
+        <button id="cancel" onclick="hideModal()">Cancel</button>
+    </div>
+</div>
+
+</body>
+</html>

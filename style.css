@@ -1,0 +1,252 @@
+
+body{
+background-color: rgb(255, 244, 196) ;
+}
+#tictac, #menu{
+width:350px;
+
+margin:0px auto;
+}
+#field{
+width:306px;
+border:2px solid #247075 ;
+padding: 0;
+
+overflow: hidden;
+position:relative;
+}
+
+#field svg{
+border:1px solid #248e75 ;
+
+float:left;
+
+cursor:pointer;
+margin:0px;
+
+width:100px;
+
+height:100px; 
+
+}
+
+#winner{
+position:absolute;
+
+width:308px;
+
+height:308px;
+
+background-color:transparent;
+
+stroke: rgba(255,0,0,0.7);
+
+stroke-width:10px;
+
+z-index:1000;
+
+display:none;
+
+stroke-dasharray:0 300;
+animation: dashwinner .5s linear 0s 1 normal;
+
+-webkit-animation: dashwinner .5s linear 0s 1 normal;
+
+-moz-animation: dashwinner .5s linear 0s 1 normal;
+
+animation-fill-mode: forwards;
+
+-webkit-animation-fill-mode: forwards;
+
+-moz-animation-fill-mode: forwards;
+
+}
+
+#container{
+margin: auto;
+}
+
+header,footer{
+
+text-align:center;
+
+color:white;
+
+background-color: #248e75 ;
+
+}
+
+footer{
+
+margin-top:20px;
+
+}
+
+
+button{
+
+margin:10px 30px 10px 0px;
+
+padding:10px 30px;
+
+color:white;
+background-color: #248e75;
+
+border-radius:10px;
+
+border:1px solid #ccc;
+
+}
+
+#eg{
+
+clear:left;
+
+}
+
+.crossr,.crossl,.circle{
+
+stroke: #ffb200;
+stroke-width:7px;
+fill:transparent;
+
+}
+
+.crossr{
+
+stroke-dasharray:0 300;
+animation: dash .5s linear 0s 1 normal;
+-webkit-animation: dash 1s linear 0s 1 normal;
+
+-moz-animation: dash 1s linear 0s 1 normal;
+
+animation-fill-mode: forwards;
+
+-webkit-animation-fill-mode: forwards;
+-moz-animation-fill-mode: forwards;
+}
+
+.crossl{
+stroke-dasharray:0 300;
+animation: dash .5s linear .5s 1 normal;
+-webkit-animation: dash .5s linear .5s 1 normal;
+
+-moz-animation: dash .5s linear .5s 1 normal;
+animation-fill-mode: forwards;
+-webkit-animation-fill-mode: forwards;
+-moz-animation-fill-mode: forwards;
+
+}
+
+
+.circle{
+
+stroke-dasharray:0 300;
+
+animation: dash 1s linear 1s 1 normal;
+
+-webkit-animation: dash 1s linear 1s 1 normal;
+-moz-animation: dash 1s linear 1s 1 normal;
+animation-fill-mode: forwards;
+-webkit-animation-fill-mode: forwards;
+
+-moz-animation-fill-mode: forwards;
+
+}
+
+
+@keyframes dash {
+from {
+ stroke-dasharray:0 300;
+  }
+
+to {
+ stroke-dasharray:300 0;
+  }
+
+}
+
+@-webkit-keyframes dash {
+
+from {
+ stroke-dasharray:0 300;
+  }
+to {
+ stroke-dasharray:300 0;
+  }
+}
+
+@keyframes dashwinner {
+from {
+ stroke-dasharray:0 500;
+  }
+
+to {
+ stroke-dasharray:500 0;
+  }
+
+}
+
+@-webkit-keyframes dashwinner {
+
+from {
+ stroke-dasharray:0 500;
+  }
+
+to {
+ stroke-dasharray:500 0;
+  }
+
+}
+
+/*
+
+animation-name: colorchange;
+animation-duration: 3s;
+animation-timing-function: ease-in;
+animation-delay: 1s;
+animation-iteration-count: infinite;
+animation-direction: reverse;
+*/
+.modalDialog {
+position: fixed;
+font-family: Arial, Helvetica, sans-serif;
+top: 0;
+
+right: 0;
+
+bottom: 0;
+
+left: 0;
+background: rgba(21,84,42,0.9);
+
+z-index: 99999;
+transition: opacity 400ms ease()-in;
+
+-webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+-o-transition: opacity 400ms ease-in;
+
+display: none;
+
+pointer-events: none;
+
+}
+
+.modalDialog > div {
+width: 300px;
+position: relative;
+margin: 30% auto;
+
+padding: 5px 20px 13px 20px;
+
+border-radius: 10px;
+
+background: rgba(255,255,255,0.7);
+background: -webkit-linear-gradient(#fff, #999);
+background: -o-linear-gradient(#fff, #999);
+
+}
+
+
+
